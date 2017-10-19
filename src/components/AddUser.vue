@@ -18,6 +18,7 @@ export default {
       users : users
     }
   },
+  //on importe le formulaire
   components : { UserForm }
 }
 </script>

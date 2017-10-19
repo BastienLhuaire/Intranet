@@ -97,10 +97,16 @@ input{
 
 
 input[type="submit"]{
-  width: 40%;
+  width: 80%;
+  margin-top: 8%;
+  font-size: 1em;
   background-color: #ddd;
   border-radius:10px;
   border: 1px solid #000;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
 }
 
 input[type="submit"], input[type="radio"]{
@@ -113,6 +119,12 @@ input[type="radio"]{
 
 .radio{
   width: 100%;
+}
+
+input[type="submit"]:hover{
+  background-color: #2b2b30;
+  color: white;
+  cursor: pointer;
 }
 
 </style>

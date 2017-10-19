@@ -5,6 +5,7 @@
     </div>
     <div>
       <ul>
+        <!-- On remplie les infos avec les valeurs fournis en prop -->
         <li><h2>{{fullname}}</h2></li>
         <li><p>{{user.email}}</p></li>
         <li><p>{{user.phone}}</p></li>
@@ -27,6 +28,7 @@ export default {
     user : { type: Object, required: true }
   },
   computed : {
+    //on concaténe le nom/prénom ainsi que la ville/pays pour écrire plus simplement 
     fullname : function() {
       return this.user.firstname+" "+this.user.lastname;
     },
@@ -45,15 +47,25 @@ export default {
   justify-content: center;
   align-items: center;
   align-self: center;
-  border: 2px solid black;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   width: 45%;
   max-height: 40%;
   margin-bottom: 5.2%;
+  background-color: rgba(78,222,255,0.41);
+
+  -webkit-box-shadow: inset 4px 4px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 4px 4px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 4px 4px 22px 0px rgba(0,0,0,0.75);
 }
 
 .guyCard li{
   display: block;
   text-align: left;
   font-size: 1.2em;
+}
+
+img{
+  border-radius: 50%;
 }
 </style>

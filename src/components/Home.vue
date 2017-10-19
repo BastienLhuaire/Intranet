@@ -10,6 +10,7 @@
     <div class="flexAlignCenter">
       <UserCard :user='user'></UserCard>
       <div class="buttonBonjour">
+        <!-- Au click on lance la méthode randomUser -->
         <button @click.prevent="randomUser">Dire bonjour à quelqu'un d'autre !</button>
       </div>
     </div>
@@ -30,12 +31,13 @@ export default {
   },
 
   methods: {
+    //la méthode qui vas récup un utilisateur dans la liste aléatoirement (Amélioration : empecher de tomber 2 fois sur le même)
     randomUser: function() {
       let propRandom = Math.floor((Math.random() * (users.length-1)));
       this.user = users[propRandom];
     }
   },
-
+  // A l'instenciation on récupère un user aléatoire pour le mettre en page d'acceuille 
   created: function () {
     this.randomUser();
   },
@@ -63,6 +65,10 @@ export default {
   border: 2px solid #000;
   border-radius: 10px;
   background-color: #ddd;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75);
 }
 .buttonBonjour button:hover{
   background-color: #000;

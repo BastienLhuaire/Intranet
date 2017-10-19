@@ -14,6 +14,7 @@
     </div>
 
     <div class="userList">
+      <!-- on créer une carte par user dans le tableau users en utilisant le component UserCard et en lui passant les props du User -->
       <UserCard v-for="(user, index) in users" :key='index' :user='user'></UserCard>
     </div>
 

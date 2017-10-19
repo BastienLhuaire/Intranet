@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-    <nav>
+   <nav>
+    <div class="nav">
       <ul>
         <li><a href="#">Accueil</a></li>
         <li><a href="#">Liste des collaborateurs</a></li>
         <li><a href="#">Ajouter un collaborateur</a></li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -41,15 +41,28 @@ li {
 a {
   color: white;
   font-size: bold;
+  transition: all 0.3s ease;
+  text-decoration: none
 }
 
 a:hover{
-  color: #000;
+  color: #56ade1;
+  text-decoration: underline;
 }
 
 nav{
-  background-color: #3838fe;
+  background-color: #2b2b30;
   padding: 1% 0;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+  -webkit-box-shadow: 0px -7px 9px 14px rgba(0,0,0,0.71);
+  -moz-box-shadow: 0px -7px 9px 14px rgba(0,0,0,0.71);
+  box-shadow: 0px -7px 9px 14px rgba(0,0,0,0.71);
 }
 
+div.nav{
+  margin: 0 10%;
+}
 </style>

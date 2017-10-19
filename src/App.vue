@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Navbar />
-    <!-- <Home /> -->
-    <!-- <Search /> -->
-    <AddUser /> 
+    <Navbar /> 
+    <Home />
+    <Search />
+   <AddUser /> 
   </div>
 </template>
 
@@ -20,6 +20,12 @@ export default {
 </script>
 
 <style>
+body{
+  background-color: #4cb0f6;
+  margin: 5% 0;
+  margin-bottom: 0;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,8 +35,9 @@ export default {
   margin-top: 60px;
 }
 
+/* class global pour placer un trait noire sous un élèment */
 .borderBottom{
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #2b2b30;
   padding-bottom: 4%;
   margin-left: 8%;
   margin-right: 8%;
@@ -38,11 +45,15 @@ export default {
 
 .container{
   margin: 0 20%;
+  padding-top: 3%;
+  padding-bottom: 5%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  transition: 0.5s all ease;
+  background-color: white;
 }
+
+
 </style>
